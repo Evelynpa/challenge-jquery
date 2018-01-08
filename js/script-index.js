@@ -6,6 +6,7 @@ $(document).ready( function(){
 /*ETAPA UNO
 ocultar flecha*/
 $('#arrowLeft').hide();
+printNews();
 
 });
 
@@ -49,6 +50,12 @@ function renderActivity(recipe) {
 	
 }
 
+
+/*ETAPA 2*/
+// crear funcion texto
+function printNews(){
+	$('#newNotice').text('NUEVAS RECETAS');
+}
 
 
 
