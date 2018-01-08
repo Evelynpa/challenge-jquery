@@ -17,3 +17,7 @@ $('.js-show-make').on('click', function(){
 	$('.js-show-make').addClass('active');
     $('.js-show-recipe').removeClass('active');
 });
+
+$('.js-back').on('click', function(){
+	$(this).attr('href', 'index.html');
+});
