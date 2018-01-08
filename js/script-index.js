@@ -10,15 +10,19 @@ printNews();
 
 });
 
-// window.load = function() {
-// 	/* Act on the event */
-// window.location.href = "file:///C:/Users/Evelyn/Desktop/LABORATORIA/Semana%2008012018/repaso%20antes%20de%20Hackaton/challenge-jquery/recipe.html";
-// };
+
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
+	//console.log('Recipes: ', recipesArray);
+	for (var i = 0; i < recipesArray.length; i++) {
+		if (recipesArray[i].hasOwnProperty('highlighted') === true) {
+			renderRecipe(recipesArray[i]);	
+		}
+			
+	}
 	console.log('Recipes: ', recipesArray);
 }
 
@@ -38,7 +42,7 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+	//console.log('Activities: ', activitiesArray);
 }
 
 /*
