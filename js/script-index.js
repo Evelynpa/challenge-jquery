@@ -7,6 +7,8 @@ $(document).ready( function(){
 ocultar flecha*/
 $('#arrowLeft').hide();
 printNews();
+/*ETAPA 6*/
+console.log(renderActivities(activities));
 
 });
 
@@ -16,7 +18,7 @@ printNews();
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	//console.log('Recipes: ', recipesArray);
+	console.log('Recipes: ', recipesArray);
 	for (var i = 0; i < recipesArray.length; i++) {
 		if (recipesArray[i].hasOwnProperty('highlighted') === true) {
 			renderRecipe(recipesArray[i]);	
@@ -57,7 +59,13 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	//console.log('Activities: ', activitiesArray);
+	console.log('Activities: ', activitiesArray);
+	for (var i = 0; i < activitiesArray.length; i++) {
+		renderActivities(activitiesArray[i]);
+		if (activitiesArray.length > 0) {
+			$('.wrapper-message').hide();
+		}
+	}
 }
 
 /*
