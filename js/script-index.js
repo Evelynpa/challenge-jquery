@@ -36,9 +36,7 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
-	console.log(recipe.title);
-	$('#listRecipes').append("<div>"+
-								"<a class='item-recipe' href='#'>"+
+	$('#listRecipes').append("<a class='item-recipe' href='#'>"+
 								  "<span class='attribution'>"+
 								    "<span class='title-recipe'>"+recipe.title+"</span>"+
 								    "<span class='metadata-recipe'>"+
@@ -49,8 +47,7 @@ function renderRecipe(recipe) {
 								    "</span>"+
 								  "</span>"+
 								  "<img src='"+recipe.source.url+"'/>"+
-								"</a>"+
-								"</div>");	
+								"</a>");	
 }
 
 
@@ -61,7 +58,7 @@ function renderRecipe(recipe) {
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
 	for (var i = 0; i < activitiesArray.length; i++) {
-		renderActivities(activitiesArray[i]);
+		renderActivity(activitiesArray[i]);
 		if (activitiesArray.length > 0) {
 			$('.wrapper-message').hide();
 		}
@@ -74,7 +71,19 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+	$('#listActivitie').append("<a href='#'' class='item-activity'>"+
+								  "<span class='attribution'>"+
+								    "<span class='avatar'>"+
+								      "<img src='"+recipe.userAvatar+"' class='image-avatar'>"+
+								      "</span>"+ 
+								      "<span class='meta'>"+
+								      "<span class='author'>"+recipe.userName+"</span> made "+
+								      "<span class='recipe'>"+recipe.recipeName+"</span>:"+recipe.text+""+ 
+								      "<span class='location'>&mdash;"+recipe.place+"</span>"+
+								    "</span>"+
+								  "</span>"+
+								  "<div class='bg-image' style='background-image: url('"+recipe.image+"')'></div>"+
+								"</a>");
 }
 
 
