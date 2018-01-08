@@ -5,3 +5,11 @@ $(document).ready(function(){
 
 	console.log('El HTML está listo!');
 });
+
+$('.js-show-recipe').on('click', function(){
+	$('.page').removeClass('make');
+});
+
+$('.js-show-make').on('click', function(){
+	$('.page').addClass('make');
+});
