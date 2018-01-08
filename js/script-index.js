@@ -46,7 +46,7 @@ function renderRecipe(recipe) {
 								      "</span>"+
 								    "</span>"+
 								  "</span>"+
-								  "<img src='"+recipe.source.url+"'/>"+
+								  "<img src='img/recipes/640x480/"+recipe.name+".jpg'/>"+
 								"</a>");	
 }
 
@@ -82,7 +82,7 @@ function renderActivity(recipe) {
 								      "<span class='location'>&mdash;"+recipe.place+"</span>"+
 								    "</span>"+
 								  "</span>"+
-								  "<div class='bg-image' style='background-image: url('"+recipe.image+"')'></div>"+
+								  "<div class='bg-image' style='background-image: url("+recipe.image+")'></div>"+
 								"</a>");
 }
 
