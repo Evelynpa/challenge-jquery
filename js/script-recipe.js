@@ -1,3 +1,5 @@
 $(document).ready(function(){
-	document.getElementById('iconMenu').style.display = 'none';
+	/*ETAPA UNO
+ocultar icono menu*/
+$('#iconMenu').hide();
 })
